@@ -21,8 +21,10 @@ class Eertools < Formula
     #                       "--disable-dependency-tracking",
     #                       "--disable-silent-rules",
     #                       "--prefix=#{prefix}"
+    args = std_cmake_args
+    args << "-DCMAKE_BUILD_TYPE=Release"
     cd "build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", *args
       system "make", "install" # if this fails, try separate make/make install steps
     end
   end
