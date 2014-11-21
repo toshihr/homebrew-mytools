@@ -22,11 +22,10 @@ class Eertools < Formula
     #                       "--disable-dependency-tracking",
     #                       "--disable-silent-rules",
     #                       "--prefix=#{prefix}"
-    system "cd", "build"
-    system "cmake", "..", *std_cmake_args
-    system "make"
-    system "make", "install" # if this fails, try separate make/make install steps
-    system "cd", "-"
+    cd "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make", "install" # if this fails, try separate make/make install steps
+    end
   end
 
   test do
