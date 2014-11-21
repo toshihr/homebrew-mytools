@@ -4,11 +4,9 @@ require "formula"
 #                /usr/local/Library/Contributions/example-formula.rb
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
-HOMEBREW_EERTOOLS_VERSION = '1.0.1'
 class Eertools < Formula
   homepage "https://github.com/kerug/eertools/"
-  url "https://github.com/kerug/eertools.git", :tag => "#{HOMEBREW_EERTOOLS_VERSION}"
-  version HOMEBREW_EERTOOLS_VERSION
+  url "https://github.com/kerug/eertools.git"
   head "https://github.com/kerug/eertools.git", :branch => 'master'
 
   depends_on "cmake" => :build
