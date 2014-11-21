@@ -7,6 +7,7 @@ require "formula"
 class Eertools < Formula
   homepage "https://github.com/kerug/eertools/"
   url "https://github.com/kerug/eertools.git"
+  version "1.0.1"
   head "https://github.com/kerug/eertools.git", :branch => 'master'
 
   depends_on "cmake" => :build
